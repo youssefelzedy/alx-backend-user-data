@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """ Use of regex in replacing occurrences of certain field values """
 
-from typing import List
 import re
+from typing import List
 import logging
 import mysql.connector
 import os
