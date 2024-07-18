@@ -59,7 +59,7 @@ class DB:
 
         return usr
 
-    def update_user(self, user_id: int, **kwargs) -> User:
+    def update_user(self, user_id: int, **kwargs) -> None:
         """Update a user by a given attribute
         """
 
