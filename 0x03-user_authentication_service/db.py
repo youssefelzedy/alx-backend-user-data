@@ -45,12 +45,12 @@ class DB:
         """Find a user by a given attribute
         """
         if not kwargs:
-            return InvalidRequestError
+            raise InvalidRequestError
 
         columns = User.__table__.columns.keys()
         for key in kwargs.keys():
             if key not in columns:
-                return InvalidRequestError
+                raise InvalidRequestError
 
         usr = self._session.query(User).filter_by(**kwargs).first()
 
