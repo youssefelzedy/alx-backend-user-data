@@ -68,7 +68,7 @@ class DB:
         columns = User.__table__.columns.keys()
         for key in kwargs.keys():
             if key not in columns:
-                raise InvalidRequestError
+                raise ValueError
 
         for key, value in kwargs.items():
             setattr(usr, key, value)
