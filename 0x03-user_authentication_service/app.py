@@ -5,10 +5,14 @@ Main file
 '''
 
 from auth import Auth
-from flask import (Flask, jsonify, request, abort, redirect)
+from flask import (Flask,
+                   jsonify,
+                   request,
+                   abort,
+                   redirect)
 
 app = Flask(__name__)
-auth = Auth()
+AUTH = Auth()
 
 
 @app.route('/', methods=['GET'])
